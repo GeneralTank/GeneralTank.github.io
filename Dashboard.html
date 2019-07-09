@@ -1,6 +1,12 @@
 <html>
     <head>
         <link href="Dashboard.css" type="text/css" rel="stylesheet">
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+        <script src="https://canvasjs.com/assets/script/jquery-ui.1.11.2.min.js"></script>
+        <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+        <script src="Dashboard.js"></script>
     </head>
     <body>
         <div class="grid-container">
@@ -33,6 +39,7 @@
               <div class="main-header_updates">Recent Items</div>
             </div>
 
+<!--
             <div class="main-overview">
               <div class="overviewcard">
                 <div class="overviewcard_icon">Overview</div>
@@ -51,11 +58,14 @@
                 <div class="overviewcard_info">Card</div>
               </div>
             </div>
+-->
 
             <div class="main-cards">
-              <div class="card">Card</div>
-              <div class="card">Card</div>
-              <div class="card">Card</div>
+              <div class="card" id="grubgraphcont">
+                <div id="grubgraph" style="height: 100%; width: 100%"></div>
+              </div>
+              <div class="card" id="speciesfoodgraph">Card</div>
+              <div class="card" id="customersgraph">Card</div>
             </div>
           </main>
 
@@ -64,6 +74,6 @@
             <div class="footer_signature">Dashboard made with the help of https://medium.com/@mtholland10/build-a-responsive-modern-dashboard-layout-with-css-grid-and-flexbox-bd343776a97e</div>
           </footer>
         </div>
-        <script src="Dashboard.js"></script>
+        
     </body>
 </html> 
