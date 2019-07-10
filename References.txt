@@ -1,2 +1,5 @@
 Login Page: https://www.youtube.com/watch?v=ooc6f1w6Mzg
+
 Dashboard: https://medium.com/@mtholland10/build-a-responsive-modern-dashboard-layout-with-css-grid-and-flexbox-bd343776a97e
+
+https://stackoverflow.com/questions/5667888/counting-the-occurrences-frequency-of-array-elements
