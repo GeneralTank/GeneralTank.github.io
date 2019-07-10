@@ -123,7 +123,7 @@ function loadLineTime(obj){
       },
       axisY:{
 			title:"No. Meals Sold",
-			valueFormatString: "#",
+			valueFormatString: "#"
         },
       axisX:{
             title:"Hours (Military)"    
