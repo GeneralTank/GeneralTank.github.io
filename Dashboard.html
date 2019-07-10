@@ -2,6 +2,10 @@
     <head>
         <link href="Dashboard.css" type="text/css" rel="stylesheet">
         
+<!--
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+-->
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
         <script src="https://canvasjs.com/assets/script/jquery-ui.1.11.2.min.js"></script>
@@ -38,34 +42,17 @@
 -->
 
           <main class="main">
-<!--
             <div class="main-header">
               <div class="main-header_heading">
-                  <input onchange="onUpload()" type="file" class="custom-file-input " 
-                         id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                  
+
               </div>
               <div class="main-header_updates">Recent Items</div>
             </div>
--->
-              
-              <div class="container">
-        <div class="row">
-            <div class="col-lg">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="input-group">
-                            <div class="custom-file">
-                                <input onchange="onUpload()" type="file" class="custom-file-input "
-                                    id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
+            <input onchange="onUpload()" type="file" class="custom-file-input " 
+                     id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
 <!--
             <div class="main-overview">
               <div class="overviewcard">
@@ -86,18 +73,23 @@
               </div>
             </div>
 -->
-
+              
+            
             <div class="main-cards">
-              <div class="card" id="grubgraphcont">
-                <div id="grubgraph" style="height: 100%; width: 100%"></div>
+                
+              <div class="card" id="grubgraphcontain0">
+                <div id="grubgraph0" style="height: 100%; width: 100%"></div>
               </div>
-              <div class="card" id="specfoodgraphcont">
-                <div id="specfoodgraph" style="height: 100%; width: 100%"></div>
+                
+              <div class="card" id="grubgraphcontain1">
+                <div id="grubgraph1" style="height: 100%; width: 100%"></div>
               </div>
-              <div class="card" id="customersgraphcont">
-                <div id="grubgraph" style="height: 100%; width: 100%"></div>  
+                
+              <div class="card" id="grubgraphcontain2">
+                <div id="grubgraph2" style="height: 100%; width: 100%"></div>  
               </div>
-            </div>
+                
+            </div>  
           </main>
 
           <footer class="footer">

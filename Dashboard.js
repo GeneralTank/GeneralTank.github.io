@@ -1,26 +1,26 @@
-//const menuIconEl = $('.menu-icon')
-//const sideNavEl = $('.sidenav')
-//const sidenavCloseEl = $('.sidenav_close-icon')
-//
-//function toggleClassName(el, className){
-//    
-//    if(el.hasClass(className)){
-//        el.removeClass(className);
-//    } else{
-//        el.addClass(className)
-//    }
-//    
-//}
-//
-//menuIconEl.on('click', function(){
-//    toggleClassName(sideNavEl, 'active');
-//    
-//});
-//
-//sidenavCloseEl.on('click', function(){
-//    toggleClassName(sideNavEl, 'active');
-//    
-//});
+const menuIconEl = $('.menu-icon')
+const sideNavEl = $('.sidenav')
+const sidenavCloseEl = $('.sidenav_close-icon')
+
+function toggleClassName(el, className){
+    
+    if(el.hasClass(className)){
+        el.removeClass(className);
+    } else{
+        el.addClass(className)
+    }
+    
+}
+
+menuIconEl.on('click', function(){
+    toggleClassName(sideNavEl, 'active');
+    
+});
+
+sidenavCloseEl.on('click', function(){
+    toggleClassName(sideNavEl, 'active');
+    
+});
 
 //window.onload = function () {
 //
@@ -72,24 +72,23 @@ function onReaderLoad(event){
     var obj = JSON.parse(event.target.result);
     // alert_data(obj.sun.t0800, obj.merperson.KP);
     // alert(obj.sun.t0800)
+    alert(obj.sales.length)
     loadStackedColumn(obj)
-    loadLineTime(obj)
-    loadLineDOTW(obj)
+    //loadLineTime(obj)
+    //loadLineDOTW(obj)
 }
 
-function alert_data(name, family){
-    alert('Sun-0800 : ' + name + ', Merperson-KP : ' + family);
-}
 
 // CanvasJS Stacked Column Chart based on https://canvasjs.com/docs/charts/chart-types/html5-stacked-column-chart/
 function loadStackedColumn(obj) {
-	var chart = new CanvasJS.Chart("#grubgraph",
+    console.log("loadcolumn")
+	var chart = new CanvasJS.Chart("grubgraph0",
 	{
 		title:{
 			text: "Krusty Insights"
 		},
 		axisY:{
-			title:"Meals sold",
+			title:"Burgers sold",
 			valueFormatString: "#",
         },
         axisX:{
@@ -98,22 +97,30 @@ function loadStackedColumn(obj) {
 		data: [
             {
                 type: "stackedColumn",
-                legendText: "Krabby Patty",
+                legendText: "Krusty Combo",
                 showInLegend: "true",
                 dataPoints: [
-                    {  y: obj.fish.KP ,     label: "Fish"},
-                    {  y: obj.merperson.KP, label: "Merperson" },
-                    {  y: obj.dolphin.KP,      label: "Dolphin" }
+                    {  y: obj.burger_by_species['Krusty Combo']['leatherback turtle'],     label: "LB Turtle"},
+                    {  y: obj.burger_by_species['Krusty Combo']['salmon'],     label: "Salmon"},
+                    {  y: obj.burger_by_species['Krusty Combo']['seahorse'],     label: "Seahorse"},
+                    {  y: obj.burger_by_species['Krusty Combo']['coral'],    label: "Coral"},
+                    {  y: obj.burger_by_species['Krusty Combo']['giant clam'],     label: "Giant Clam"},
+                    {  y: obj.burger_by_species['Krusty Combo']['gray whale'],     label: "Gray Whale"},
+                    {  y: obj.burger_by_species['Krusty Combo']['sea lion'],     label: "Sea Lion"},
                 ]
             },  
             {
                 type: "stackedColumn",
-                legendText: "Krusty Combo",
+                legendText: "Krabby Pattie",
                 showInLegend: "true",
                     dataPoints: [
-                    {  y: obj.fish.KC ,     label: "Fish"},
-                    {  y: obj.merperson.KC, label: "Merperson" },
-                    {  y: obj.dolphin.KC,      label: "Dolphin" }
+                    {  y: obj.burger_by_species['Krabby Pattie']['leatherback turtle'],     label: "LB Turtle"},
+                    {  y: obj.burger_by_species['Krabby Pattie']['salmon'],     label: "Salmon"},
+                    {  y: obj.burger_by_species['Krabby Pattie']['seahorse'],     label: "Seahorse"},
+                    {  y: obj.burger_by_species['Krabby Pattie']['coral'],    label: "Coral"},
+                    {  y: obj.burger_by_species['Krabby Pattie']['giant clam'],     label: "Giant Clam"},
+                    {  y: obj.burger_by_species['Krabby Pattie']['gray whale'],     label: "Gray Whale"},
+                    {  y: obj.burger_by_species['Krabby Pattie']['sea lion'],     label: "Sea Lion"},
                 ]
             },  
             {
@@ -124,9 +131,13 @@ function loadStackedColumn(obj) {
                 yValueFormatString: "#",
                 indexLabelPlacement: "outside",
                 dataPoints: [
-                    {  y: obj.fish.KD,      label: "Fish"},
-                    {  y: obj.merperson.KD, label: "Merperson" },
-                    {  y: obj.dolphin.KD,      label: "Dolphin" }
+                    {  y: obj.burger_by_species['Krusty Deluxe']['leatherback turtle'],     label: "LB Turtle"},
+                    {  y: obj.burger_by_species['Krusty Deluxe']['salmon'],     label: "Salmon"},
+                    {  y: obj.burger_by_species['Krusty Deluxe']['seahorse'],     label: "Seahorse"},
+                    {  y: obj.burger_by_species['Krusty Deluxe']['coral'],    label: "Coral"},
+                    {  y: obj.burger_by_species['Krusty Deluxe']['giant clam'],     label: "Giant Clam"},
+                    {  y: obj.burger_by_species['Krusty Deluxe']['gray whale'],     label: "Gray Whale"},
+                    {  y: obj.burger_by_species['Krusty Deluxe']['sea lion'],     label: "Sea Lion"},
                 ]
             }
         
@@ -136,7 +147,7 @@ function loadStackedColumn(obj) {
 }
 
 function loadLineTime(obj){
-    var chart = new CanvasJS.Chart("chartContainer1",
+    var chart = new CanvasJS.Chart("grubgraph1",
     {
 
       title:{
@@ -166,7 +177,7 @@ function loadLineTime(obj){
 }
 
 function loadLineDOTW(obj){
-    var chart = new CanvasJS.Chart("chartContainer2",
+    var chart = new CanvasJS.Chart("grubgraph2",
     {
 
       title:{
