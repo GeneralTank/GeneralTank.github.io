@@ -121,6 +121,13 @@ function loadLineTime(obj){
       title:{
       text: "Meals sold for each hour"
       },
+      axisY:{
+			title:"No. Meals Sold",
+			valueFormatString: "#",
+        },
+      axisX:{
+            title:"Hours (Military)"    
+      },
        data: [
       {
         type: "line",
