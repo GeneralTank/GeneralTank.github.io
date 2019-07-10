@@ -48,6 +48,7 @@ function loadStackedColumn(obj) {
     console.log("loadcolumn")
 	var chart = new CanvasJS.Chart("grubgraph0",
 	{
+        animationEnabled: true,
 		title:{
 			text: "Krusty Insights"
 		},
