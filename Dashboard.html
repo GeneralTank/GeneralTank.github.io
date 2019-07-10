@@ -7,6 +7,7 @@
         <script src="https://canvasjs.com/assets/script/jquery-ui.1.11.2.min.js"></script>
         <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
         <script src="Dashboard.js"></script>
+        <title>Krusty Krab - Insigts Dashboard</title>
     </head>
     <body>
         <div class="grid-container">
@@ -15,11 +16,13 @@
           </div>
 
           <header class="header">
-            <div class="header_search">Search...</div>
-                <button class="searchbtn">...</button>
-            <div class="header_avatar">Your face</div>
+            <div class="header_search"></div>
+            <div class="header_avatar">
+                <button onclick="window.location.href = './Login.html'">Logout</button>
+            </div>
           </header>
 
+<!--
           <aside class="sidenav">
             <div class="sidenav_close-icon">
               <i class="fas fa-times sidenav_brand-close"></i>
@@ -32,12 +35,36 @@
               <li class="sidenav_list-item">Item Five</li>
             </ul>
           </aside>
+-->
 
           <main class="main">
+<!--
             <div class="main-header">
-              <div class="main-header_heading">Hello User</div>
+              <div class="main-header_heading">
+                  <input onchange="onUpload()" type="file" class="custom-file-input " 
+                         id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+              </div>
               <div class="main-header_updates">Recent Items</div>
             </div>
+-->
+              
+              <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input onchange="onUpload()" type="file" class="custom-file-input "
+                                    id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 <!--
             <div class="main-overview">
@@ -64,14 +91,18 @@
               <div class="card" id="grubgraphcont">
                 <div id="grubgraph" style="height: 100%; width: 100%"></div>
               </div>
-              <div class="card" id="speciesfoodgraph">Card</div>
-              <div class="card" id="customersgraph">Card</div>
+              <div class="card" id="specfoodgraphcont">
+                <div id="specfoodgraph" style="height: 100%; width: 100%"></div>
+              </div>
+              <div class="card" id="customersgraphcont">
+                <div id="grubgraph" style="height: 100%; width: 100%"></div>  
+              </div>
             </div>
           </main>
 
           <footer class="footer">
-            <div class="footer_copyright">&copy; 2018 Matt Holland</div>
-            <div class="footer_signature">Dashboard made with the help of https://medium.com/@mtholland10/build-a-responsive-modern-dashboard-layout-with-css-grid-and-flexbox-bd343776a97e</div>
+            <div class="footer_copyright">&copy; Krusty Krab</div>
+            <div class="footer_signature">This dashboard is rightfully owned by Mr. Eugene Krabs; owner of the Krusty Krab</div>
           </footer>
         </div>
         

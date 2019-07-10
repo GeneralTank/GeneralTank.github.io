@@ -9,7 +9,7 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 240px 1fr;
+/*  grid-template-columns: 240px 1fr;*/
   grid-template-rows: 50px 1fr 50px;
   grid-template-areas:
     'header'
@@ -68,6 +68,7 @@ body {
     background-color: #648ca6;
 }
 
+/*
 .sidenav {
   grid-area: sidenav;
   display: flex;
@@ -79,7 +80,7 @@ body {
   transform: translateX(-245px);
   transition: all .6s ease-in-out;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-  z-index: 2; /* Needs to sit above the hamburger menu icon */
+  z-index: 2;  Needs to sit above the hamburger menu icon 
   background-color: #394263;
 }
 
@@ -118,6 +119,7 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
 }
+*/
 
 .main {
   grid-area: main;
@@ -183,9 +185,10 @@ body {
   height: 265px;
 }
 
-/*Small Screen*/
+/*
+Small Screen
 @media only screen and (min-width: 46.875em) {
-  /* Show the sidenav */
+   Show the sidenav 
   .grid-container {
     grid-template-columns: 240px 1fr;
     grid-template-areas:
@@ -208,10 +211,11 @@ body {
   }
 }
 
-/* Medium screens */
+ Medium screens 
 @media only screen and (min-width: 65.625em) {
-  /* Break out main cards into two columns */
+   Break out main cards into two columns 
   .main-cards {
     column-count: 2;
   }
 }
+*/
