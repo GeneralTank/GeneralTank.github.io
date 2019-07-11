@@ -128,5 +128,5 @@ body {
 }
 
 .card:nth-child(3) {
-  height: 485px;
+  height: auto;
 }
