@@ -1,5 +1,5 @@
-const pwsupp="pw"
-const unsupp="ADMIN"
+const pwsupp="p@ssword"
+const unsupp="admin"
 
 $(document).ready(function(e){
     $(".btn").submit(function(e){
